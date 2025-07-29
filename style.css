@@ -7,5 +7,21 @@
   --Grey900: hsl(187, 24%, 22%);
 }
 
-* {
+body {
+  font-family: "Karla", sans-serif;
+  line-height: 1.6;
+  color: hsl(187, 24%, 22%);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
 }
