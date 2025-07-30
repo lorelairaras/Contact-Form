@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,44 +16,44 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Contact form</title>
+    <title>Contact Form</title>
   </head>
   <body>
     <main>
-      <h1>Contact Us</h1>
+      <div class="form-container">
+        <h1>Contact Us</h1>
 
-      <form id="contactForm" novalidate>
-        <fieldset>
-          <div class="form-group">
-            <label for="firstName" class="required">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              required
-              aria-describedby="firstNameError"
-            />
-            <p id="firstNameError" class="error-message">
-              This field is required
-            </p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="required">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                aria-describedby="firstNameError"
+              />
+              <p id="firstNameError" class="error-message">
+                This field is required
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName" class="required">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                aria-describedby="lastNameError"
+              />
+              <p id="lastNameError" class="error-message">
+                This field is required
+              </p>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="lastName" class="required">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              required
-              aria-describedby="lastNameError"
-            />
-            <p id="lastNameError" class="error-message">
-              This field is required
-            </p>
-          </div>
-        </fieldset>
-
-        <fieldset>
           <div class="form-group">
             <label for="email" class="required">Email Address</label>
             <input
@@ -67,41 +67,41 @@
               Please enter a valid email address
             </p>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend class="required">Query Type</legend>
-          <div
-            class="radio-group"
-            role="radiogroup"
-            aria-describedby="queryTypeError"
-          >
-            <div class="radio-option">
-              <input
-                type="radio"
-                id="generalEnquiry"
-                name="queryType"
-                value="general"
-                required
-              />
-              <label for="generalEnquiry">General Enquiry</label>
+          <div class="form-group query-type-group">
+            <legend class="required">Query Type</legend>
+            <div
+              class="radio-options"
+              role="radiogroup"
+              aria-describedby="queryTypeError"
+            >
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="generalEnquiry"
+                  name="queryType"
+                  value="general"
+                  required
+                />
+                <span class="radio-custom"></span>
+                <label for="generalEnquiry">General Enquiry</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="supportRequest"
+                  name="queryType"
+                  value="support"
+                />
+                <span class="radio-custom"></span>
+                <label for="supportRequest">Support Request</label>
+              </div>
             </div>
-            <div class="radio-option">
-              <input
-                type="radio"
-                id="supportRequest"
-                name="queryType"
-                value="support"
-              />
-              <label for="supportRequest">Support Request</label>
-            </div>
+            <p id="queryTypeError" class="error-message">
+              Please select a query type
+            </p>
           </div>
-          <p id="queryTypeError" class="error-message">
-            Please select a query type
-          </p>
-        </fieldset>
 
-        <fieldset>
           <div class="form-group">
             <label for="message" class="required">Message</label>
             <textarea
@@ -115,10 +115,8 @@
               This field is required
             </p>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <div class="form-group">
+          <div class="form-group consent-group">
             <div class="checkbox-option">
               <input
                 type="checkbox"
@@ -135,14 +133,14 @@
               To submit this form, please consent to being contacted
             </p>
           </div>
-        </fieldset>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
 
-      <div class="success-message" role="alert">
-        <h2>Message Sent!</h2>
-        <p>Thanks for completing the form. We'll be in touch soon!</p>
+        <div class="success-message" role="alert">
+          <h2>Message Sent!</h2>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
       </div>
     </main>
     <script src="main.js"></script>
