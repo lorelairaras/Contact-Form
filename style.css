@@ -18,7 +18,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: var(--green200);
-  padding: 20px;
+  padding: 40px 20px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,14 +27,16 @@ body {
 
 main {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
+  margin: 50px 0;
 }
 
 .form-container {
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
 }
 
 h1 {
@@ -195,7 +197,6 @@ input[type="checkbox"] {
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
 }
 
 .submit-btn:hover {
@@ -204,19 +205,47 @@ input[type="checkbox"] {
 
 .success-message {
   display: none;
-  background-color: var(--green200);
-  color: var(--green600);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--grey900);
+  color: var(--white);
   padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  text-align: center;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-message img {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 0.75rem;
+  margin-bottom: 0;
+}
+
+.success-message h2 {
+  display: inline;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 24px;
 }
 
 .success-message p {
-  margin-top: 8px;
+  clear: both;
+  margin: 0.5rem 0 0 0;
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.4;
 }
 
-/* Validation states */
 input:invalid,
 textarea:invalid {
   border-color: var(--grey500);
@@ -241,6 +270,14 @@ textarea:invalid {
 
 /* Desktop Styles */
 @media (min-width: 768px) {
+  body {
+    padding: 70px 20px;
+  }
+
+  main {
+    margin: 60px 0;
+  }
+
   .form-row {
     flex-direction: row;
     gap: 1.5rem;
